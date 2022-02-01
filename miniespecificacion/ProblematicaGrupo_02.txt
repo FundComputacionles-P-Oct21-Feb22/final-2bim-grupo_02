@@ -1,0 +1,231 @@
+1. Inicio
+2. FuncionPrincipal()
+3.    mensaje_final, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+4.    banderin, x(5)[{A-Z}, {a-z}]
+5.    cadena_campana, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+6.    contador, i[0-n] <-- 0
+7.    bandera, boolean[True, False] <-- True
+8.    Escribir("proceso inicial: ")
+9.    mensaje_final = ["Campaña con poca afluencia", "Campaña moderada siga adelante", "Excelente campaña"]
+10.    cadena_campana <-- ""
+11.    mientras(bandera) haga
+12.	Escribir "Ingrese un número del 1 al 7 para registrar datos en la cuenta que desee\n"
+13.                              "[1]Facebook\n[2]Twitter\n[3]Whatsapp\n[4]Telegram\n[5]Signal\n"
+14.                              "[6]Instagram\n[7] Flickr\n"
+16.        Leer respuesta 
+17.        contador <-- contador + 1
+18.        Si (respuesta == 1) entonces
+19.            cuenta_faceboook = crear_facebook()
+20.            Escribir(cuenta_faceboook)
+21.	caso contrario
+22.        	si(respuesta == 2)entonces
+23.
+24.            		crear_twitter()
+25.		caso contrario
+26.        	si(respuesta == 3) entonces
+27.            		cuenta_whatsapp = crear_whatsapp()
+28.            		Escribir(cuenta_whatsapp)
+29.		caso contrario
+30.        	si(respuesta == 4)entonces
+31.            		crear_telegram()
+32.		caso contrario
+33.        	si(respuesta == 5) entonces
+34.            		cuenta_signal = crear_signal()
+35.            		print(cuenta_signal)
+36.		caso contrario
+37.        		si(respuesta == 6)entonces
+38.            			crear_instagram()
+39.			caso contrario
+40.        			si(respuesta == 7) entonces
+41.            				crear_flickr()
+42.	Escribir "¿Desea registrar más cuentas? [Si][No]"
+43.        Leer banderin
+44.        Si (banderin == no OR banderin == nO OR banderin == NO OR banderin == No) entonces
+45.            bandera = False
+46.    Fin Mientras
+48.    Si (1 <= contador <= 5) entonces
+49.    	cadena_campana <-- mensaje_final[0]
+50.    caso contrario 
+51.    	si (5 < contador <= 16) entonces
+52.    		cadena_campana <-- mensaje_final[1]
+53.    	caso contrario
+54.        	si (contador > 16) entonces
+55.            		cadena_campana <-- mensaje_final[2]
+56.
+57.    Escribir Se ha registrado un total de + contador\n + cadena_campana
+58. Fin funcionPrincipal
+
+
+59. Funcion crear_facebook():
+60.    nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+61.    edad_user, i[0-n]
+62.    ciudad_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+63.    pais_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+64.    correo_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+65.    datos_obtenidos, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+
+66.    Escribir "Creando cuenta de Facebook\n"
+67.    Escribir "Ingresar el nombre de usuario: "
+68.    Leer nombre_user
+69.    Escribir "Edad del usuario: "
+70.    Leer edad_user 
+71.    Escribir ("Ingresar la ciudad de origen del Usuario: ")
+72.    Leer ciudad_user
+73.    Escribir("Ingresar el país de origen del usuario: ")
+74.    Leer pais_user
+75.    Escribir("Ingresar el correo electrónico del Usuario: ")
+76.    correo_user    
+77.    datos_obtenidos <-- ("-------------------\n" +
+78.                       "Datos Ingresados:\nNombre: " + nombre_user "\nEdad: " + edad_user + "\nCiudad: " + ciudad_user 
+79.			+ "\nPaís: " + pais_user +"\nCorreo Electrónico: " + correo_user
+                       
+80.    return datos_obtenidos
+81. Fin funcion crear_facebook
+
+
+82. Funcion crear_twitter():
+83.    nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+84.    nombre, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+85.    apellido, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+86.    edad_user, i[0-n]
+87.    idioma, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+88.    ciudad_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+89.    pais_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+90.    correo_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+91.    datos_obtenidos, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+
+92.    Escribir("Ingresar el nombre de usuario: ")
+93.    Leer nombre_user    
+94.    Escribir("Ingresar nombres (solo nombres): ")
+95.    Leer nombre
+96.    Escribir("Ingresar sus apellidos: ")
+97.    Leer apellido
+98.    Escribir("Edad del usuario: ")
+99.    Leer edad_user
+100.    Escribir("Ingresar la ciudad de origen del Usuario: ")
+101.   Leer ciudad_user
+102.   Escribir("Ingresar el país de origen del usuario: ")
+103.   Leer pais_user
+104.   Escribir("Ingrese su idioma: ")
+105.   Leer idioma
+106.   Escribir("Ingresar el correo electrónico del Usuario: ")
+107.   Leer correo_user
+
+108.   datos_obtenidos <-- ("-------------------\n" +
+109.                      "Datos Ingresados:\Usuario: " + nombre_user + "\nNombre: " + nombre + "\nApellido: " + apellido_user + "\nEdad: " + edad_user + 
+110.                      "\nCiudad: " + ciudad_user + "\nPaís: " + pais_user +"\nCorreo Electrónico: " + correo_user
+111.   print(datos_obtenidos)
+112.    fin funcion crear_twitter
+
+
+113. Funcion crear_whatsapp():
+114.     Escribir("Proceso Inicial")
+115.     nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+116.     numero_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+117.     edad_user, i[0-n]
+118.     ciudad_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+119.     pais_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+120.     datos_obtenidos, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+
+121.    Escribir("Ingresar el nombre de Usuario: ")
+122.    Leer nombre_user
+123.    Escribir("Ingresar número de Teléfono: ")
+124.    Leer numero_user
+125.    Escribir("Ingresar la edad del usuario: ")
+126.    Leer edad_user
+127.    Escribir("Ingresar la ciudad de Origen del Usuario: ")
+128.    Leer ciudad_user
+129.    Escribir("Ingresar el país de origen del usuario: ")
+130.    Leer pais_user
+131.    datos_obtenidos <-- ("-------------------\n" +
+132.                       "Datos Ingresados:\nNombre: " + nombre_user "\nNúmero: " + numero_user 
+133.			+ "\nEdad: " + edad_user + "\nCiudad: " + ciudad_user +"\nPaís: " + pais_user
+134.    return datos_obtenidos
+135. fin funcion crear_whatsapp
+
+
+136. Funcion crear_telegram():
+137.    Escribir("Proceso Inicial")
+138.    nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+139.    numero_tel, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+140.    ciudad_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+141.    pais_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+142.    area_int, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+
+143.    Escribir("Ingresar el nombre de usuario: ")
+144.    Leer nombre_user
+145.    Escribir("Ingrese su número de teléfono: ")
+146.    Leer numero_tel
+147.    Escribir("Ingresar la ciudad de origen del Usuario: ")
+148.    Leer ciudad_user
+149.    Escribir("Ingresar el país de origen del usuario: ")
+150.    Leer pais_user
+151.    Escribir("Ingrese su área de interés: ")
+152.    Leer area_inte
+
+153.    datos_obtenidos <-- ("-------------------\n" +
+154.                       "Datos Ingresados:\nNombre: " + nombre_user "\nNúmero: " + numero_user 
+155.			+ "\nEdad: " + edad_user + "\nCiudad: " + ciudad_user +"\nPaís: " + pais_user
+156.    print(datos_obtenidos)
+157. fin funcion crear_telegram
+
+158. Funcion crear_signal():
+159.    Escribir("Proceso Inicial")
+160.    nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+161.    ciudad_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+162.    edad_user, i[0-n]
+163.    hobby_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+
+164.    Escribir("Ingresar el nombre de Usuario: ")
+165.    Leer nombre_user
+166.    Escribir("Ingresar número de Teléfono: ")
+167.    Leer numero_user
+168.    Escribir ("Ingresar la ciudad de Origen del Usuario: ")
+169.    Leer ciudad_user
+170.    Escribir("Ingresar el país de origen del usuario: ")
+171.    Leer pais_user
+172.    Escribir("Ingresar el hobby principal del Usuario: ")
+173.    Leer hobby_user
+174.    datos_obtenidos <-- ("-------------------\n" +
+175.                       "Datos Ingresados:\nNombre: " + nombre_user "\nNúmero: " + numero_user 
+176.			+ "\nCiudad: " + ciudad_user +"\nPaís: " + pais_user +"\Hobby Principal: " + hobby_user
+177.    return datos_obtenidos
+178. fin funcion crear_signal
+
+179. Funcion crear_instagram():
+180.    Escribir("Proceso Inicial")
+181.    nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+182.    numero_tel, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+183.    ciudad_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+184.    pais_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+185.    correo_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+
+186.    Escribir("Ingresar el nombre de usuario: ")
+187.    Leer nombre_user 
+188.    Escribir("Ingresar la ciudad de origen del Usuario: ")
+189.    Leer ciudad_user 
+190.    Escribir("Edad del usuario: ")
+191.    Leer edad_user
+192.    Escribir ("Ingresar el correo electrónico del Usuario: ")
+193.    Leer correo_user 
+194.    datos_obtenidos <-- ("-------------------\n" +
+195.                      "Datos Ingresados:\nNombre: " + nombre_user + "\nCiudad: " + ciudad_user+ "\nEdad del usuario: " + edad_user 
+196.			+ "\nPaís: " + pais_user +"\nCorreo Electrónico: " + correo_user
+197.     Escribir(datos_obtenidos)
+198. fin funcion crear_instagram
+
+199. Funcion crear_flickr():
+200.    Esccribir ("proceso inicial: ")
+201.    nombre_user, x(50)[{A-Z}, {a-z}, {0-n}, BS]
+202.    correo_user, x(50)[{A-Z}, {a-z}, {0-n}, BS] 
+   
+203.    nombre_user = input("Ingresar el nombre de usuario: ")
+204.    correo_user = input("Ingresar el correo electrónico del Usuario: ")
+
+205.    datos_obtenidos = ("-------------------\n Datos Ingresados:\nNombre: " + nombre_user "
+206.                       "\nCorreo Electrónico: " + correo_user
+207.    return datos_obtenidos
+208. fin funcion crear_flickr
+209. Fin 
+
+
